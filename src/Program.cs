@@ -12,11 +12,17 @@ namespace DropdownMenu
         {
             ConsoleKeyInfo input;
             string[] menuText = { "Aperitief", "Voorgerecht", "Hoofdgerecht", "Nagerecht", "Slaapmutsje" };
-            for (int i = 0; i < menuText.Length; i++)
+
+            do
             {
-                Console.Write(menuText[i] + " ");
-            }
-            input = Console.ReadKey();
+                Console.Clear();
+                for (int i = 0; i < menuText.Length; i++)
+                {
+                    Console.Write(menuText[i] + " ");
+                }
+
+                input = Console.ReadKey();
+            } while (input.KeyChar != 'q');
         }
     }
 }
